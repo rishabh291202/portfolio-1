@@ -1,6 +1,22 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { SiHackerrank, SiTryhackme, SiCodechef, SiKalilinux, SiCplusplus, SiReact, SiPython, SiMysql, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
+import { 
+  SiHackerrank, 
+  SiTryhackme, 
+  SiCodechef, 
+  SiKalilinux, 
+  SiLinux,      
+  SiCplusplus, 
+  SiReact, 
+  SiPython, 
+  SiMysql, 
+  SiJavascript, 
+  SiHtml5, 
+  SiCss3, 
+  SiLeetcode, 
+  SiPhp, 
+  SiHackthebox 
+} from "react-icons/si"; 
 import "./App.css";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
@@ -23,6 +39,10 @@ const MotionCard = ({ href, title, description }) => (
 );
 
 function App() {
+  React.useEffect(() => {
+    document.title = "Rishabh Shavare";
+  }, []);
+
   return (
     <div className="App">
       {/* Hero Section */}
@@ -56,6 +76,7 @@ function App() {
       <section className="projects" id="projects">
         <h2>Projects</h2>
         <div className="project-cards">
+          {/* Portfolio */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
               href="https://yourportfolio.com"
@@ -64,6 +85,7 @@ function App() {
             />
           </Tilt>
 
+          {/* Alumni Connection */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
               href="#"
@@ -72,6 +94,7 @@ function App() {
             />
           </Tilt>
 
+          {/* Keylogger */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
               href="#"
@@ -80,6 +103,7 @@ function App() {
             />
           </Tilt>
 
+          {/* Bug Bounty Research */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
               href="#"
@@ -88,6 +112,7 @@ function App() {
             />
           </Tilt>
 
+          {/* Bug Bounty Automation Tool */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
               href="https://github.com/yourusername/bug-bounty-tool"
@@ -96,11 +121,39 @@ function App() {
             />
           </Tilt>
 
+          {/* Weather App */}
           <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
             <MotionCard
-              href="https://github.com/yourusername/cybersecurity-scripts"
-              title="Cybersecurity Scripts"
-              description="Python scripts for network scanning and vulnerability detection."
+              href="https://github.com/rishabh291202/weather-app"
+              title="Weather App"
+              description="A weather forecasting app built with React that fetches real-time weather data."
+            />
+          </Tilt>
+
+          {/* To-Do List */}
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
+            <MotionCard
+              href="https://github.com/rishabh291202/To-Do-List"
+              title="To-Do List App"
+              description="A simple and interactive To-Do List web application built with HTML, CSS, and Python."
+            />
+          </Tilt>
+
+          {/* Password Analyzer */}
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
+            <MotionCard
+              href="https://github.com/rishabh291202/Password-analyzer.io"
+              title="Password Analyzer"
+              description="A web tool that evaluates password strength and provides recommendations for secure passwords."
+            />
+          </Tilt>
+
+          {/* Phishing Attack Simulator */}
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.1} style={{ width: "280px" }}>
+            <MotionCard
+              href="https://github.com/rishabh291202/Phishing-attack-simulator.py"
+              title="Phishing Attack Simulator"
+              description="A Python Flask and HTML based tool to simulate phishing attacks for educational purposes."
             />
           </Tilt>
         </div>
@@ -111,27 +164,38 @@ function App() {
         <h2>Skills</h2>
         <div className="skills-grid">
           <div className="skill-card"><SiKalilinux className="skill-icon" /><p>Kali Linux</p></div>
+          <div className="skill-card"><SiLinux className="skill-icon" /><p>Linux</p></div>
           <div className="skill-card"><SiCplusplus className="skill-icon" /><p>C++</p></div>
           <div className="skill-card"><SiPython className="skill-icon" /><p>Python</p></div>
           <div className="skill-card"><SiJavascript className="skill-icon" /><p>JavaScript</p></div>
           <div className="skill-card"><SiHtml5 className="skill-icon" /><p>HTML</p></div>
           <div className="skill-card"><SiCss3 className="skill-icon" /><p>CSS</p></div>
           <div className="skill-card"><SiReact className="skill-icon" /><p>React</p></div>
+          <div className="skill-card"><SiPhp className="skill-icon" /><p>PHP</p></div>
+        </div>
+      </section>
+
+      {/* Coding Platforms Section */}
+      <section className="coding-platforms" id="coding-platforms">
+        <h2>Code & Conquer</h2>
+        <div className="social-icons">
+          <a href="https://www.hackerrank.com/profile/rishabhshevere21" target="_blank" rel="noopener noreferrer"><SiHackerrank /></a>
+          <a href="https://tryhackme.com/p/rishabh02" target="_blank" rel="noopener noreferrer"><SiTryhackme /></a>
+          <a href="https://www.codechef.com/users/rishabhshavare" target="_blank" rel="noopener noreferrer"><SiCodechef /></a>
+          <a href="https://leetcode.com/u/1pyO7Zc0Ok/" target="_blank" rel="noopener noreferrer"><SiLeetcode /></a>
+          <a href="https://ctf.hackthebox.com/user/profile/784375" target="_blank" rel="noopener noreferrer"><SiHackthebox /></a>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="contact" id="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact </h2>
         <div className="social-icons">
           <a href="mailto:rishabhshavare2002@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
           <a href="https://www.linkedin.com/in/rishabh-shavare/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           <a href="https://github.com/rishabh291202" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
           <a href="https://www.instagram.com/_rishabh.2912/?hl=en" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           <a href="https://wa.me/9893469755" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
-          <a href="https://www.hackerrank.com/profile/rishabhshevere21" target="_blank" rel="noopener noreferrer"><SiHackerrank /></a>
-          <a href="https://tryhackme.com/p/rishabh02" target="_blank" rel="noopener noreferrer"><SiTryhackme /></a>
-          <a href="https://www.codechef.com/users/rishabhshavare" target="_blank" rel="noopener noreferrer"><SiCodechef /></a>
         </div>
       </section>
 
