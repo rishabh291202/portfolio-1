@@ -3,7 +3,7 @@
 This is my personal portfolio website built using **React.js**.  
 It showcases my projects, skills, and ways to get in touch with me.  
 
-🚀 Live Demo: [View Portfolio](https://your-netlify-link.netlify.app)
+🚀 Live Demo: [View Portfolio](https://rishabh-shavare.netlify.app/)
 
 ---
 
